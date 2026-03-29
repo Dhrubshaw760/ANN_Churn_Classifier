@@ -1,0 +1,39 @@
+# Models and serialized objects
+*.h5
+*.pkl
+*.joblib
+
+# Data files
+*.csv
+
+# Logs and training outputs
+log/
+logs/
+*.log
+
+# Archives
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.Python
+env/
+venv/
+.venv/
+
+# Environment variables
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
