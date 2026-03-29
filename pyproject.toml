@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "churn-classifier"
 version = "1.0.0"
 description = "ANN Churn Classification Model"
-requires-python = ">=3.10"
+requires-python = ">=3.9, <3.13"
 dependencies = [
     "numpy",
     "pandas",
