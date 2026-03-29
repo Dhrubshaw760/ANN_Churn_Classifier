@@ -1,39 +1,28 @@
-# Models and serialized objects
-*.h5
-*.pkl
-*.joblib
-
-# Data files
-*.csv
-
-# Logs and training outputs
-log/
-logs/
-*.log
-
-# Archives
-*.zip
-
-# Python
-__pycache__/
-*.pyc
-*.egg-info/
-.Python
-env/
+scaler.pkl
+onehot_encoder_geo.pkl
+label_encoder_gender.pkl
+model.h5
 venv/
-.venv/
+
+
+# # Python cache
+# __pycache__/
+# *.pyc
+
+# Virtual environment
+# venv/
+# .venv/
+
+# ML models (large files)
+# *.pkl
+# *.h5
 
 # Environment variables
-.env
+# .env
 
 # Jupyter
-.ipynb_checkpoints/
-
-# IDE
-.vscode/
-.idea/
-*.swp
+# .ipynb_checkpoints/
 
 # OS files
-.DS_Store
-Thumbs.db
+# .DS_Store
+# Thumbs.db
