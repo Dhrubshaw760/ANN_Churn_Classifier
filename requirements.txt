@@ -1,5 +1,5 @@
 numpy
-pandas>=2.0
+pandas
 scikit-learn
-streamlit>=1.40
+streamlit
 tensorflow-cpu
