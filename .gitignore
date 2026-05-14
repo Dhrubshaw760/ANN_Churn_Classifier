@@ -1,8 +1,8 @@
 scaler.pkl
 onehot_encoder_geo.pkl
 label_encoder_gender.pkl
-venv/
-
+.venv/
+log
 
 # # Python cache
 # __pycache__/

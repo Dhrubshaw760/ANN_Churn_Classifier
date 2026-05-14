@@ -1,3 +1,7 @@
+import os
+# Forces TensorFlow 2.16+ to use legacy Keras hooks so SciKeras doesn't crash
+os.environ["TF_USE_LEGACY_KERAS"] = "1"
+
 import streamlit as st
 import numpy as np
 import tensorflow as tf
@@ -6,11 +10,11 @@ import pandas as pd
 import pickle
 
 # Load the trained model
-model = tf.keras.models.load_model('model.keras')
+model = tf.keras.models.load_model('model.h5')
 
 with open('scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
-with open('onehot_encoder_geo.pkl', 'rb') as f:
+with open('onehot_encoder_geopkl.pkl', 'rb') as f:
     onehot_encoder_geo = pickle.load(f)
 with open('label_encoder_gender.pkl', 'rb') as f:
     label_encoder_gender = pickle.load(f)
@@ -52,10 +56,10 @@ ohdf = pd.DataFrame(ohe, columns=onehot_encoder_geo.get_feature_names_out(['Geog
 input_data = pd.concat([input_data.reset_index(drop=True), ohdf], axis=1)  
 
 # Scale the input data
-scaler = scaler.transform(input_data)
+scaled_input = scaler.transform(input_data)
 
 # Predict churn 
-pred = model.predict(scaler)
+pred = model.predict(scaled_input)
 pred_proba = pred[0][0]
 st.write('Churn Probability: ', pred_proba)
 
