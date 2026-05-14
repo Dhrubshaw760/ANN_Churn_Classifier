@@ -10,7 +10,7 @@ model = tf.keras.models.load_model('model.h5')
 
 with open('scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
-with open('onehot_encoder_geopkl.pkl', 'rb') as f:
+with open('onehot_encoder_geo.pkl', 'rb') as f:
     onehot_encoder_geo = pickle.load(f)
 with open('label_encoder_gender.pkl', 'rb') as f:
     label_encoder_gender = pickle.load(f)

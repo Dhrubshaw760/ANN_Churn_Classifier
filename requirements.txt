@@ -6,3 +6,4 @@ tensorboard
 scikit-learn
 matplotlib
 tf-keras
+setuptools==81.0.0
