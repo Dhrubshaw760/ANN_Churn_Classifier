@@ -1,6 +1,6 @@
-scaler.pkl
-onehot_encoder_geo.pkl
-label_encoder_gender.pkl
+# scaler.pkl
+# onehot_encoder_geo.pkl
+# label_encoder_gender.pkl
 .venv/
 log
 
